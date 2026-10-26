@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #16202b;
+  --color-paper: #f5f7f9;
+  --color-line: #dde2e8;
+  --color-brand: #0b6b5d;
+  --color-brand-dark: #08493f;
+  --color-signal: #e8a317;
+  --font-sans: var(--font-bricolage), ui-sans-serif, system-ui, sans-serif;
+}
+
+body { background: var(--color-paper); color: var(--color-ink); }
+
+@layer components {
+  .btn { @apply inline-flex items-center justify-center rounded-md px-4 py-2.5 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-primary { @apply bg-brand text-white hover:bg-brand-dark; }
+  .btn-ghost { @apply border border-line bg-white hover:border-brand; }
+  .card { @apply rounded-lg border border-line bg-white; }
+  .field { @apply block w-full rounded-md border border-line bg-white px-3 py-2 text-sm; }
+  .nav-link { @apply text-sm font-medium text-ink/80 hover:text-brand; }
+}
+
+:focus-visible { outline: 2px solid var(--color-brand); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}

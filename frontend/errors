@@ -1,0 +1,2193 @@
+> tienda-next@1.0.0 typecheck
+> tsc --noEmit
+
+app/actions/auth.ts:3:25 - error TS2307: Cannot find module 'next/headers' or its corresponding type declarations.
+
+3 import { cookies } from "next/headers";
+                          ~~~~~~~~~~~~~~
+
+app/actions/auth.ts:4:26 - error TS2307: Cannot find module 'next/navigation' or its corresponding type declarations.
+
+4 import { redirect } from "next/navigation";
+                           ~~~~~~~~~~~~~~~~~
+
+app/actions/auth.ts:5:32 - error TS2307: Cannot find module 'next/cache' or its corresponding type declarations.
+
+5 import { revalidatePath } from "next/cache";
+                                 ~~~~~~~~~~~~
+
+app/actions/auth.ts:21:13 - error TS2591: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.
+
+21     secure: process.env.NODE_ENV === "production",
+               ~~~~~~~
+
+app/actions/orders.ts:3:26 - error TS2307: Cannot find module 'next/navigation' or its corresponding type declarations.
+
+3 import { redirect } from "next/navigation";
+                           ~~~~~~~~~~~~~~~~~
+
+app/actions/orders.ts:4:43 - error TS2307: Cannot find module 'next/cache' or its corresponding type declarations.
+
+4 import { revalidatePath, updateTag } from "next/cache";
+                                            ~~~~~~~~~~~~
+
+app/actions/orders.ts:36:75 - error TS2366: Function lacks ending return statement and return type does not include 'undefined'.
+
+36 export async function payOrder(orderId: number, paymentMethodId: string): Promise<{ error: string }> {
+                                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/cart/page.tsx:1:31 - error TS2307: Cannot find module 'next' or its corresponding type declarations.
+
+1 import type { Metadata } from "next";
+                                ~~~~~~
+
+app/cart/page.tsx:8:5 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+8     <>
+      ~~
+
+app/cart/page.tsx:9:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+9       <h1 className="mb-6 text-3xl font-bold tracking-tight">Carrito</h1>
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/cart/page.tsx:9:69 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+9       <h1 className="mb-6 text-3xl font-bold tracking-tight">Carrito</h1>
+                                                                      ~~~~~
+
+app/checkout/[orderId]/error.tsx:5:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+5     <div className="card mx-auto max-w-lg p-8 text-center" role="alert">
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/checkout/[orderId]/error.tsx:5:5 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+  5     <div className="card mx-auto max-w-lg p-8 text-center" role="alert">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  6       <h1 className="text-xl font-bold">No pudimos cargar el pago</h1>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+  8       <button onClick={reset} className="btn btn-primary mt-5">Reintentar</button>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  9     </div>
+    ~~~~~~~~~~
+
+app/checkout/[orderId]/error.tsx:6:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+6       <h1 className="text-xl font-bold">No pudimos cargar el pago</h1>
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/checkout/[orderId]/error.tsx:6:66 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+6       <h1 className="text-xl font-bold">No pudimos cargar el pago</h1>
+                                                                   ~~~~~
+
+app/checkout/[orderId]/error.tsx:7:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+7       <p className="mt-2 text-ink/70">{error.message}</p>
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/checkout/[orderId]/error.tsx:7:54 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+7       <p className="mt-2 text-ink/70">{error.message}</p>
+                                                       ~~~~
+
+app/checkout/[orderId]/error.tsx:8:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+8       <button onClick={reset} className="btn btn-primary mt-5">Reintentar</button>
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/checkout/[orderId]/error.tsx:8:74 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+8       <button onClick={reset} className="btn btn-primary mt-5">Reintentar</button>
+                                                                           ~~~~~~~~~
+
+app/checkout/[orderId]/error.tsx:9:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+9     </div>
+      ~~~~~~
+
+app/checkout/[orderId]/loading.tsx:3:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+3     <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2" aria-busy="true">
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/checkout/[orderId]/loading.tsx:3:5 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+3     <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2" aria-busy="true">
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4       <div className="h-64 animate-pulse rounded-lg bg-line" />
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5       <div className="h-64 animate-pulse rounded-lg bg-line" />
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+6     </div>
+  ~~~~~~~~~~
+
+app/checkout/[orderId]/loading.tsx:4:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+4       <div className="h-64 animate-pulse rounded-lg bg-line" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/checkout/[orderId]/loading.tsx:5:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+5       <div className="h-64 animate-pulse rounded-lg bg-line" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/checkout/[orderId]/loading.tsx:6:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+6     </div>
+      ~~~~~~
+
+app/checkout/[orderId]/page.tsx:1:36 - error TS2307: Cannot find module 'next/navigation' or its corresponding type declarations.
+
+1 import { notFound, redirect } from "next/navigation";
+                                     ~~~~~~~~~~~~~~~~~
+
+app/checkout/[orderId]/page.tsx:2:31 - error TS2307: Cannot find module 'next' or its corresponding type declarations.
+
+2 import type { Metadata } from "next";
+                                ~~~~~~
+
+app/checkout/[orderId]/page.tsx:15:7 - error TS18047: 'order' is possibly 'null'.
+
+15   if (order.status === "paid") redirect(`/orders/${id}`);
+         ~~~~~
+
+app/checkout/[orderId]/page.tsx:18:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+18     <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/checkout/[orderId]/page.tsx:18:5 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+ 18     <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 19       <section className="card p-5">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+ 26       </section>
+    ~~~~~~~~~~~~~~~~
+ 27     </div>
+    ~~~~~~~~~~
+
+app/checkout/[orderId]/page.tsx:19:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+19       <section className="card p-5">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/checkout/[orderId]/page.tsx:20:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+20         <h1 className="mb-3 text-xl font-bold">Orden #{order.id}</h1>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/checkout/[orderId]/page.tsx:20:56 - error TS18047: 'order' is possibly 'null'.
+
+20         <h1 className="mb-3 text-xl font-bold">Orden #{order.id}</h1>
+                                                          ~~~~~
+
+app/checkout/[orderId]/page.tsx:20:65 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+20         <h1 className="mb-3 text-xl font-bold">Orden #{order.id}</h1>
+                                                                   ~~~~~
+
+app/checkout/[orderId]/page.tsx:21:21 - error TS2322: Type 'Order | null' is not assignable to type 'Order'.
+  Type 'null' is not assignable to type 'Order'.
+
+21         <OrderLines order={order} />
+                       ~~~~~
+
+  components/order-summary.tsx:4:41 - The expected type comes from property 'order' which is declared here on type '{ order: Order; }'
+    4 export function OrderLines({ order }: { order: Order }) {
+                                              ~~~~~
+
+app/checkout/[orderId]/page.tsx:22:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+22       </section>
+         ~~~~~~~~~~
+
+app/checkout/[orderId]/page.tsx:23:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+23       <section className="card p-5">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/checkout/[orderId]/page.tsx:24:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+24         <h2 className="mb-3 text-xl font-bold">Pago con tarjeta</h2>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/checkout/[orderId]/page.tsx:24:64 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+24         <h2 className="mb-3 text-xl font-bold">Pago con tarjeta</h2>
+                                                                  ~~~~~
+
+app/checkout/[orderId]/page.tsx:25:31 - error TS18047: 'order' is possibly 'null'.
+
+25         <PaymentForm orderId={order.id} total={order.total} />
+                                 ~~~~~
+
+app/checkout/[orderId]/page.tsx:25:48 - error TS18047: 'order' is possibly 'null'.
+
+25         <PaymentForm orderId={order.id} total={order.total} />
+                                                  ~~~~~
+
+app/checkout/[orderId]/page.tsx:26:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+26       </section>
+         ~~~~~~~~~~
+
+app/checkout/[orderId]/page.tsx:27:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+27     </div>
+       ~~~~~~
+
+app/error.tsx:5:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+5     <div className="card mx-auto max-w-lg p-8 text-center" role="alert">
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/error.tsx:5:5 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+  5     <div className="card mx-auto max-w-lg p-8 text-center" role="alert">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  6       <h1 className="text-xl font-bold">Algo salió mal</h1>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+  9       <button onClick={reset} className="btn btn-primary mt-5">Reintentar</button>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 10     </div>
+    ~~~~~~~~~~
+
+app/error.tsx:6:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+6       <h1 className="text-xl font-bold">Algo salió mal</h1>
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/error.tsx:6:55 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+6       <h1 className="text-xl font-bold">Algo salió mal</h1>
+                                                        ~~~~~
+
+app/error.tsx:7:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+7       <p className="mt-2 text-ink/70">{error.message || "No pudimos cargar esta página."}</p>
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/error.tsx:7:90 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+7       <p className="mt-2 text-ink/70">{error.message || "No pudimos cargar esta página."}</p>
+                                                                                           ~~~~
+
+app/error.tsx:8:24 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+8       {error.digest && <p className="mt-1 text-xs text-ink/50">Código: {error.digest}</p>}
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/error.tsx:8:86 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+8       {error.digest && <p className="mt-1 text-xs text-ink/50">Código: {error.digest}</p>}
+                                                                                       ~~~~
+
+app/error.tsx:9:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+9       <button onClick={reset} className="btn btn-primary mt-5">Reintentar</button>
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/error.tsx:9:74 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+9       <button onClick={reset} className="btn btn-primary mt-5">Reintentar</button>
+                                                                           ~~~~~~~~~
+
+app/error.tsx:10:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+10     </div>
+       ~~~~~~
+
+app/layout.tsx:1:31 - error TS2307: Cannot find module 'next' or its corresponding type declarations.
+
+1 import type { Metadata } from "next";
+                                ~~~~~~
+
+app/layout.tsx:2:37 - error TS2307: Cannot find module 'next/font/google' or its corresponding type declarations.
+
+2 import { Bricolage_Grotesque } from "next/font/google";
+                                      ~~~~~~~~~~~~~~~~~~
+
+app/layout.tsx:5:8 - error TS2882: Cannot find module or type declarations for side-effect import of './globals.css'.
+
+5 import "./globals.css";
+         ~~~~~~~~~~~~~~~
+
+app/layout.tsx:14:62 - error TS2503: Cannot find namespace 'React'.
+
+14 export default function RootLayout({ children }: { children: React.ReactNode }) {
+                                                                ~~~~~
+
+app/layout.tsx:16:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+16     <html lang="es" className={font.variable}>
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/layout.tsx:16:5 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+ 16     <html lang="es" className={font.variable}>
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 17       <body className="font-sans antialiased">
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+ 22       </body>
+    ~~~~~~~~~~~~~
+ 23     </html>
+    ~~~~~~~~~~~
+
+app/layout.tsx:17:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+17       <body className="font-sans antialiased">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/layout.tsx:20:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+20           <main className="mx-auto max-w-6xl px-4 py-8">{children}</main>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/layout.tsx:20:67 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+20           <main className="mx-auto max-w-6xl px-4 py-8">{children}</main>
+                                                                     ~~~~~~~
+
+app/layout.tsx:22:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+22       </body>
+         ~~~~~~~
+
+app/layout.tsx:23:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+23     </html>
+       ~~~~~~~
+
+app/login/page.tsx:1:31 - error TS2307: Cannot find module 'next' or its corresponding type declarations.
+
+1 import type { Metadata } from "next";
+                                ~~~~~~
+
+app/login/page.tsx:8:10 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+8   return <AuthForm mode="login" next={next} expired={!!expired} />;
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/not-found.tsx:1:18 - error TS2307: Cannot find module 'next/link' or its corresponding type declarations.
+
+1 import Link from "next/link";
+                   ~~~~~~~~~~~
+
+app/not-found.tsx:5:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+5     <div className="card mx-auto max-w-lg p-8 text-center">
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/not-found.tsx:5:5 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+  5     <div className="card mx-auto max-w-lg p-8 text-center">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  6       <h1 className="text-xl font-bold">No encontramos lo que buscas</h1>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+  8       <Link href="/products" className="btn btn-primary mt-5">Volver al catálogo</Link>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  9     </div>
+    ~~~~~~~~~~
+
+app/not-found.tsx:6:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+6       <h1 className="text-xl font-bold">No encontramos lo que buscas</h1>
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/not-found.tsx:6:69 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+6       <h1 className="text-xl font-bold">No encontramos lo que buscas</h1>
+                                                                      ~~~~~
+
+app/not-found.tsx:7:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+7       <p className="mt-2 text-ink/70">El recurso no existe o ya no está disponible.</p>
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/not-found.tsx:7:84 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+7       <p className="mt-2 text-ink/70">El recurso no existe o ya no está disponible.</p>
+                                                                                     ~~~~
+
+app/not-found.tsx:9:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+9     </div>
+      ~~~~~~
+
+app/orders/[id]/page.tsx:1:18 - error TS2307: Cannot find module 'next/link' or its corresponding type declarations.
+
+1 import Link from "next/link";
+                   ~~~~~~~~~~~
+
+app/orders/[id]/page.tsx:2:26 - error TS2307: Cannot find module 'next/navigation' or its corresponding type declarations.
+
+2 import { notFound } from "next/navigation";
+                           ~~~~~~~~~~~~~~~~~
+
+app/orders/[id]/page.tsx:3:31 - error TS2307: Cannot find module 'next' or its corresponding type declarations.
+
+3 import type { Metadata } from "next";
+                                ~~~~~~
+
+app/orders/[id]/page.tsx:24:37 - error TS18047: 'order' is possibly 'null'.
+
+24   const confirmed = paid === "1" && order.status === "paid";
+                                       ~~~~~
+
+app/orders/[id]/page.tsx:27:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+27     <div className="mx-auto max-w-2xl">
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/orders/[id]/page.tsx:27:5 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+ 27     <div className="mx-auto max-w-2xl">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 28       {confirmed && (
+    ~~~~~~~~~~~~~~~~~~~~~
+... 
+ 44       <Link href="/orders" className="mt-4 inline-block text-sm text-brand underline">Ver todas mis compras</Link>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 45     </div>
+    ~~~~~~~~~~
+
+app/orders/[id]/page.tsx:29:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+29         <div className="mb-6 rounded-lg border border-emerald-300 bg-emerald-50 p-5" role="status">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/orders/[id]/page.tsx:30:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+30           <h1 className="text-2xl font-bold text-emerald-900">¡Compra confirmada!</h1>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/orders/[id]/page.tsx:30:82 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+30           <h1 className="text-2xl font-bold text-emerald-900">¡Compra confirmada!</h1>
+                                                                                    ~~~~~
+
+app/orders/[id]/page.tsx:31:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+31           <p className="mt-1 text-emerald-900/80">Recibimos tu pago de la orden #{order.id}.</p>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/orders/[id]/page.tsx:31:83 - error TS18047: 'order' is possibly 'null'.
+
+31           <p className="mt-1 text-emerald-900/80">Recibimos tu pago de la orden #{order.id}.</p>
+                                                                                     ~~~~~
+
+app/orders/[id]/page.tsx:31:93 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+31           <p className="mt-1 text-emerald-900/80">Recibimos tu pago de la orden #{order.id}.</p>
+                                                                                               ~~~~
+
+app/orders/[id]/page.tsx:32:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+32         </div>
+           ~~~~~~
+
+app/orders/[id]/page.tsx:34:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+34       <section className="card p-5">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/orders/[id]/page.tsx:35:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+35         <div className="mb-3 flex items-baseline justify-between">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/orders/[id]/page.tsx:36:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+36           <h2 className="text-xl font-bold">Orden #{order.id}</h2>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/orders/[id]/page.tsx:36:53 - error TS18047: 'order' is possibly 'null'.
+
+36           <h2 className="text-xl font-bold">Orden #{order.id}</h2>
+                                                       ~~~~~
+
+app/orders/[id]/page.tsx:36:62 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+36           <h2 className="text-xl font-bold">Orden #{order.id}</h2>
+                                                                ~~~~~
+
+app/orders/[id]/page.tsx:37:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+37           <span className="text-sm text-ink/60">{STATUS_LABEL[order.status] ?? order.status} · {formatDate(order.createdAt)}</span>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/orders/[id]/page.tsx:37:63 - error TS18047: 'order' is possibly 'null'.
+
+37           <span className="text-sm text-ink/60">{STATUS_LABEL[order.status] ?? order.status} · {formatDate(order.createdAt)}</span>
+                                                                 ~~~~~
+
+app/orders/[id]/page.tsx:37:80 - error TS18047: 'order' is possibly 'null'.
+
+37           <span className="text-sm text-ink/60">{STATUS_LABEL[order.status] ?? order.status} · {formatDate(order.createdAt)}</span>
+                                                                                  ~~~~~
+
+app/orders/[id]/page.tsx:37:108 - error TS18047: 'order' is possibly 'null'.
+
+37           <span className="text-sm text-ink/60">{STATUS_LABEL[order.status] ?? order.status} · {formatDate(order.createdAt)}</span>
+                                                                                                              ~~~~~
+
+app/orders/[id]/page.tsx:37:125 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+37           <span className="text-sm text-ink/60">{STATUS_LABEL[order.status] ?? order.status} · {formatDate(order.createdAt)}</span>
+                                                                                                                               ~~~~~~~
+
+app/orders/[id]/page.tsx:38:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+38         </div>
+           ~~~~~~
+
+app/orders/[id]/page.tsx:39:21 - error TS2322: Type 'Order | null' is not assignable to type 'Order'.
+  Type 'null' is not assignable to type 'Order'.
+
+39         <OrderLines order={order} />
+                       ~~~~~
+
+  components/order-summary.tsx:4:41 - The expected type comes from property 'order' which is declared here on type '{ order: Order; }'
+    4 export function OrderLines({ order }: { order: Order }) {
+                                              ~~~~~
+
+app/orders/[id]/page.tsx:40:10 - error TS18047: 'order' is possibly 'null'.
+
+40         {order.status !== "paid" && (
+            ~~~~~
+
+app/orders/[id]/page.tsx:41:36 - error TS18047: 'order' is possibly 'null'.
+
+41           <Link href={`/checkout/${order.id}`} className="btn btn-primary mt-4">Completar pago</Link>
+                                      ~~~~~
+
+app/orders/[id]/page.tsx:43:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+43       </section>
+         ~~~~~~~~~~
+
+app/orders/[id]/page.tsx:45:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+45     </div>
+       ~~~~~~
+
+app/orders/error.tsx:5:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+5     <div className="card mx-auto max-w-lg p-8 text-center" role="alert">
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/orders/error.tsx:5:5 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+  5     <div className="card mx-auto max-w-lg p-8 text-center" role="alert">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  6       <h1 className="text-xl font-bold">No pudimos cargar tus compras</h1>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+  8       <button onClick={reset} className="btn btn-primary mt-5">Reintentar</button>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  9     </div>
+    ~~~~~~~~~~
+
+app/orders/error.tsx:6:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+6       <h1 className="text-xl font-bold">No pudimos cargar tus compras</h1>
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/orders/error.tsx:6:70 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+6       <h1 className="text-xl font-bold">No pudimos cargar tus compras</h1>
+                                                                       ~~~~~
+
+app/orders/error.tsx:7:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+7       <p className="mt-2 text-ink/70">{error.message}</p>
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/orders/error.tsx:7:54 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+7       <p className="mt-2 text-ink/70">{error.message}</p>
+                                                       ~~~~
+
+app/orders/error.tsx:8:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+8       <button onClick={reset} className="btn btn-primary mt-5">Reintentar</button>
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/orders/error.tsx:8:74 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+8       <button onClick={reset} className="btn btn-primary mt-5">Reintentar</button>
+                                                                           ~~~~~~~~~
+
+app/orders/error.tsx:9:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+9     </div>
+      ~~~~~~
+
+app/orders/loading.tsx:5:5 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+5     <>
+      ~~
+
+app/orders/loading.tsx:6:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+6       <div className="mb-6 h-9 w-48 animate-pulse rounded bg-line" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/orders/page.tsx:1:26 - error TS2307: Cannot find module 'react' or its corresponding type declarations.
+
+1 import { Suspense } from "react";
+                           ~~~~~~~
+
+app/orders/page.tsx:2:31 - error TS2307: Cannot find module 'next' or its corresponding type declarations.
+
+2 import type { Metadata } from "next";
+                                ~~~~~~
+
+app/orders/page.tsx:9:5 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+9     <>
+      ~~
+
+app/orders/page.tsx:10:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+10       <h1 className="mb-6 text-3xl font-bold tracking-tight">Mis compras</h1>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/orders/page.tsx:10:73 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+10       <h1 className="mb-6 text-3xl font-bold tracking-tight">Mis compras</h1>
+                                                                           ~~~~~
+
+app/page.tsx:1:26 - error TS2307: Cannot find module 'next/navigation' or its corresponding type declarations.
+
+1 import { redirect } from "next/navigation";
+                           ~~~~~~~~~~~~~~~~~
+
+app/products/[id]/loading.tsx:3:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+3     <div className="mt-8 grid gap-8 md:grid-cols-2" aria-busy="true">
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/products/[id]/loading.tsx:3:5 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+  3     <div className="mt-8 grid gap-8 md:grid-cols-2" aria-busy="true">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  4       <div className="aspect-square animate-pulse rounded-lg bg-line" />
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+  9       </div>
+    ~~~~~~~~~~~~
+ 10     </div>
+    ~~~~~~~~~~
+
+app/products/[id]/loading.tsx:4:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+4       <div className="aspect-square animate-pulse rounded-lg bg-line" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/products/[id]/loading.tsx:5:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+5       <div className="space-y-4">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/products/[id]/loading.tsx:6:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+6         <div className="h-9 w-3/4 animate-pulse rounded bg-line" />
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/products/[id]/loading.tsx:7:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+7         <div className="h-9 w-1/3 animate-pulse rounded bg-line" />
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/products/[id]/loading.tsx:8:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+8         <div className="h-24 animate-pulse rounded bg-line" />
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/products/[id]/loading.tsx:9:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+9       </div>
+        ~~~~~~
+
+app/products/[id]/loading.tsx:10:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+10     </div>
+       ~~~~~~
+
+app/products/[id]/page.tsx:1:18 - error TS2307: Cannot find module 'next/link' or its corresponding type declarations.
+
+1 import Link from "next/link";
+                   ~~~~~~~~~~~
+
+app/products/[id]/page.tsx:2:26 - error TS2307: Cannot find module 'next/navigation' or its corresponding type declarations.
+
+2 import { notFound } from "next/navigation";
+                           ~~~~~~~~~~~~~~~~~
+
+app/products/[id]/page.tsx:3:31 - error TS2307: Cannot find module 'next' or its corresponding type declarations.
+
+3 import type { Metadata } from "next";
+                                ~~~~~~
+
+app/products/[id]/page.tsx:23:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+23     <article>
+       ~~~~~~~~~
+
+app/products/[id]/page.tsx:23:5 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+ 23     <article>
+        ~~~~~~~~~
+ 24       <Link href="/products" className="text-sm text-brand underline">Volver al catálogo</Link>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+ 36       </div>
+    ~~~~~~~~~~~~
+ 37     </article>
+    ~~~~~~~~~~~~~~
+
+app/products/[id]/page.tsx:25:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+25       <div className="mt-4 grid gap-8 md:grid-cols-2">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/products/[id]/page.tsx:26:23 - error TS2322: Type 'Product | null' is not assignable to type 'Product'.
+  Type 'null' is not assignable to type 'Product'.
+
+26         <ProductThumb product={product} className="aspect-square w-full rounded-lg" />
+                         ~~~~~~~
+
+  components/product-card.tsx:7:61 - The expected type comes from property 'product' which is declared here on type '{ product: Product; className?: string | undefined; }'
+    7 export function ProductThumb({ product, className = "" }: { product: Product; className?: string }) {
+                                                                  ~~~~~~~
+
+app/products/[id]/page.tsx:27:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+27         <div>
+           ~~~~~
+
+app/products/[id]/page.tsx:28:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+28           <h1 className="text-3xl font-bold tracking-tight">{product.name}</h1>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/products/[id]/page.tsx:28:62 - error TS18047: 'product' is possibly 'null'.
+
+28           <h1 className="text-3xl font-bold tracking-tight">{product.name}</h1>
+                                                                ~~~~~~~
+
+app/products/[id]/page.tsx:28:75 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+28           <h1 className="text-3xl font-bold tracking-tight">{product.name}</h1>
+                                                                             ~~~~~
+
+app/products/[id]/page.tsx:29:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+29           <p className="mt-3 text-3xl font-bold text-brand">{formatMoney(product.price)}</p>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/products/[id]/page.tsx:29:74 - error TS18047: 'product' is possibly 'null'.
+
+29           <p className="mt-3 text-3xl font-bold text-brand">{formatMoney(product.price)}</p>
+                                                                            ~~~~~~~
+
+app/products/[id]/page.tsx:29:89 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+29           <p className="mt-3 text-3xl font-bold text-brand">{formatMoney(product.price)}</p>
+                                                                                           ~~~~
+
+app/products/[id]/page.tsx:30:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+30           <p className="mt-4 max-w-prose text-ink/80">{product.description || "Sin descripción."}</p>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/products/[id]/page.tsx:30:56 - error TS18047: 'product' is possibly 'null'.
+
+30           <p className="mt-4 max-w-prose text-ink/80">{product.description || "Sin descripción."}</p>
+                                                          ~~~~~~~
+
+app/products/[id]/page.tsx:30:98 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+30           <p className="mt-4 max-w-prose text-ink/80">{product.description || "Sin descripción."}</p>
+                                                                                                    ~~~~
+
+app/products/[id]/page.tsx:31:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+31           <p className="mt-4 text-sm text-ink/60">
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/products/[id]/page.tsx:32:14 - error TS18047: 'product' is possibly 'null'.
+
+32             {product.stock > 0 ? `${product.stock} unidades disponibles` : "Sin stock por ahora"}
+                ~~~~~~~
+
+app/products/[id]/page.tsx:32:37 - error TS18047: 'product' is possibly 'null'.
+
+32             {product.stock > 0 ? `${product.stock} unidades disponibles` : "Sin stock por ahora"}
+                                       ~~~~~~~
+
+app/products/[id]/page.tsx:33:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+33           </p>
+             ~~~~
+
+app/products/[id]/page.tsx:34:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+34           <div className="mt-6"><AddToCartButton product={product} /></div>
+             ~~~~~~~~~~~~~~~~~~~~~~
+
+app/products/[id]/page.tsx:34:50 - error TS2322: Type 'Product | null' is not assignable to type 'Product'.
+  Type 'null' is not assignable to type 'Product'.
+
+34           <div className="mt-6"><AddToCartButton product={product} /></div>
+                                                    ~~~~~~~
+
+  components/add-to-cart-button.tsx:7:48 - The expected type comes from property 'product' which is declared here on type '{ product: Product; }'
+    7 export function AddToCartButton({ product }: { product: Product }) {
+                                                     ~~~~~~~
+
+app/products/[id]/page.tsx:34:70 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+34           <div className="mt-6"><AddToCartButton product={product} /></div>
+                                                                        ~~~~~~
+
+app/products/[id]/page.tsx:35:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+35         </div>
+           ~~~~~~
+
+app/products/[id]/page.tsx:36:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+36       </div>
+         ~~~~~~
+
+app/products/[id]/page.tsx:37:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+37     </article>
+       ~~~~~~~~~~
+
+app/products/loading.tsx:5:5 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+5     <>
+      ~~
+
+app/products/loading.tsx:6:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+6       <div className="mb-6 h-9 w-48 animate-pulse rounded bg-line" />
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/products/page.tsx:1:26 - error TS2307: Cannot find module 'react' or its corresponding type declarations.
+
+1 import { Suspense } from "react";
+                           ~~~~~~~
+
+app/products/page.tsx:2:31 - error TS2307: Cannot find module 'next' or its corresponding type declarations.
+
+2 import type { Metadata } from "next";
+                                ~~~~~~
+
+app/products/page.tsx:16:5 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+16     <>
+       ~~
+
+app/products/page.tsx:17:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+17       <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/products/page.tsx:18:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+18         <h1 className="text-3xl font-bold tracking-tight">Catálogo</h1>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/products/page.tsx:18:67 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+18         <h1 className="text-3xl font-bold tracking-tight">Catálogo</h1>
+                                                                     ~~~~~
+
+app/products/page.tsx:19:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+19         <form action="/products" role="search" className="flex gap-2">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/products/page.tsx:20:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+20           <label htmlFor="search" className="sr-only">Buscar productos</label>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/products/page.tsx:20:71 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+20           <label htmlFor="search" className="sr-only">Buscar productos</label>
+                                                                         ~~~~~~~~
+
+app/products/page.tsx:21:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+21           <input id="search" name="search" defaultValue={search} placeholder="Buscar por nombre" className="field w-64" />
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/products/page.tsx:22:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+22           <button className="btn btn-ghost">Buscar</button>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+app/products/page.tsx:22:51 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+22           <button className="btn btn-ghost">Buscar</button>
+                                                     ~~~~~~~~~
+
+app/products/page.tsx:23:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+23         </form>
+           ~~~~~~~
+
+app/products/page.tsx:24:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+24       </div>
+         ~~~~~~
+
+app/register/page.tsx:1:31 - error TS2307: Cannot find module 'next' or its corresponding type declarations.
+
+1 import type { Metadata } from "next";
+                                ~~~~~~
+
+app/register/page.tsx:8:10 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+8   return <AuthForm mode="register" next={next} expired={!!expired} />;
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/add-to-cart-button.tsx:3:26 - error TS2307: Cannot find module 'react' or its corresponding type declarations.
+
+3 import { useState } from "react";
+                           ~~~~~~~
+
+components/add-to-cart-button.tsx:10:30 - error TS7006: Parameter 'i' implicitly has an 'any' type.
+
+10   const inCart = items.find((i) => i.productId === product.id)?.quantity ?? 0;
+                                ~
+
+components/add-to-cart-button.tsx:14:12 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+14     return <button className="btn btn-primary" disabled>Agotado</button>;
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/add-to-cart-button.tsx:14:12 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+14     return <button className="btn btn-primary" disabled>Agotado</button>;
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/add-to-cart-button.tsx:14:64 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+14     return <button className="btn btn-primary" disabled>Agotado</button>;
+                                                                  ~~~~~~~~~
+
+components/add-to-cart-button.tsx:18:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+18     <div>
+       ~~~~~
+
+components/add-to-cart-button.tsx:19:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+ 19       <button
+          ~~~~~~~
+ 20         className="btn btn-primary"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+ 26         }}
+    ~~~~~~~~~~
+ 27       >
+    ~~~~~~~
+
+components/add-to-cart-button.tsx:29:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+29       </button>
+         ~~~~~~~~~
+
+components/add-to-cart-button.tsx:30:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+30       <p className="mt-2 h-5 text-sm text-brand" role="status" aria-live="polite">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/add-to-cart-button.tsx:32:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+32       </p>
+         ~~~~
+
+components/add-to-cart-button.tsx:33:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+33     </div>
+       ~~~~~~
+
+components/auth-form.tsx:3:18 - error TS2307: Cannot find module 'next/link' or its corresponding type declarations.
+
+3 import Link from "next/link";
+                   ~~~~~~~~~~~
+
+components/auth-form.tsx:4:32 - error TS2307: Cannot find module 'react' or its corresponding type declarations.
+
+4 import { useActionState } from "react";
+                                 ~~~~~~~
+
+components/auth-form.tsx:11:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+11     <div>
+       ~~~~~
+
+components/auth-form.tsx:11:5 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+ 11     <div>
+        ~~~~~
+ 12       <label htmlFor={name} className="mb-1 block text-sm font-medium">{label}</label>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+ 17       {error && <p id={`${name}-err`} className="mt-1 text-sm text-red-700">{error}</p>}
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 18     </div>
+    ~~~~~~~~~~
+
+components/auth-form.tsx:12:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+12       <label htmlFor={name} className="mb-1 block text-sm font-medium">{label}</label>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/auth-form.tsx:12:79 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+12       <label htmlFor={name} className="mb-1 block text-sm font-medium">{label}</label>
+                                                                                 ~~~~~~~~
+
+components/auth-form.tsx:13:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+13       <input
+         ~~~~~~
+14         id={name} name={name} type={type} required autoComplete={auto} className="field"
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+15         aria-invalid={!!error} aria-describedby={error ? `${name}-err` : undefined}
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+16       />
+   ~~~~~~~~
+
+components/auth-form.tsx:17:17 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+17       {error && <p id={`${name}-err`} className="mt-1 text-sm text-red-700">{error}</p>}
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/auth-form.tsx:17:84 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+17       {error && <p id={`${name}-err`} className="mt-1 text-sm text-red-700">{error}</p>}
+                                                                                      ~~~~
+
+components/auth-form.tsx:18:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+18     </div>
+       ~~~~~~
+
+components/auth-form.tsx:28:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+28     <div className="card mx-auto max-w-md p-6">
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/auth-form.tsx:29:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+29       <h1 className="text-2xl font-bold">{isLogin ? "Ingresar" : "Crear cuenta"}</h1>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/auth-form.tsx:29:81 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+29       <h1 className="text-2xl font-bold">{isLogin ? "Ingresar" : "Crear cuenta"}</h1>
+                                                                                   ~~~~~
+
+components/auth-form.tsx:30:19 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+30       {expired && <p className="mt-3 rounded bg-amber-50 p-3 text-sm text-amber-900" role="status">Tu sesión expiró. Ingresa de nuevo.</p>}
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/auth-form.tsx:30:135 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+30       {expired && <p className="mt-3 rounded bg-amber-50 p-3 text-sm text-amber-900" role="status">Tu sesión expiró. Ingresa de nuevo.</p>}
+                                                                                                                                         ~~~~
+
+components/auth-form.tsx:31:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+31       <form action={action} className="mt-5 space-y-4">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/auth-form.tsx:32:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+32         <input type="hidden" name="next" value={next ?? ""} />
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/auth-form.tsx:37:26 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+37         {state?.error && <p className="rounded bg-red-50 p-3 text-sm text-red-800" role="alert">{state.error}</p>}
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/auth-form.tsx:37:110 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+37         {state?.error && <p className="rounded bg-red-50 p-3 text-sm text-red-800" role="alert">{state.error}</p>}
+                                                                                                                ~~~~
+
+components/auth-form.tsx:38:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+38         <button className="btn btn-primary w-full" disabled={pending}>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/auth-form.tsx:40:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+40         </button>
+           ~~~~~~~~~
+
+components/auth-form.tsx:41:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+41       </form>
+         ~~~~~~~
+
+components/auth-form.tsx:42:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+42       <p className="mt-4 text-sm text-ink/70">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/auth-form.tsx:47:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+47       </p>
+         ~~~~
+
+components/auth-form.tsx:48:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+48     </div>
+       ~~~~~~
+
+components/cart-link.tsx:3:18 - error TS2307: Cannot find module 'next/link' or its corresponding type declarations.
+
+3 import Link from "next/link";
+                   ~~~~~~~~~~~
+
+components/cart-link.tsx:9:5 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+  9     <Link href="/cart" className="nav-link">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 10       Carrito
+    ~~~~~~~~~~~~~
+... 
+ 13       </span>
+    ~~~~~~~~~~~~~
+ 14     </Link>
+    ~~~~~~~~~~~
+
+components/cart-link.tsx:11:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+11       <span className="ml-2 inline-flex min-w-6 justify-center rounded-full bg-ink px-1.5 text-xs text-white" aria-label={`${count} productos`}>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-link.tsx:13:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+13       </span>
+         ~~~~~~~
+
+components/cart-provider.tsx:3:85 - error TS2307: Cannot find module 'react' or its corresponding type declarations.
+
+3 import { createContext, useContext, useEffect, useMemo, useReducer, useState } from "react";
+                                                                                      ~~~~~~~
+
+components/cart-provider.tsx:52:56 - error TS2503: Cannot find namespace 'React'.
+
+52 export function CartProvider({ children }: { children: React.ReactNode }) {
+                                                          ~~~~~
+
+components/cart-provider.tsx:73:28 - error TS7006: Parameter 'n' implicitly has an 'any' type.
+
+73       count: items.reduce((n, i) => n + i.quantity, 0),
+                              ~
+
+components/cart-provider.tsx:73:31 - error TS7006: Parameter 'i' implicitly has an 'any' type.
+
+73       count: items.reduce((n, i) => n + i.quantity, 0),
+                                 ~
+
+components/cart-provider.tsx:74:28 - error TS7006: Parameter 'n' implicitly has an 'any' type.
+
+74       total: items.reduce((n, i) => n + i.quantity * i.price, 0),
+                              ~
+
+components/cart-provider.tsx:74:31 - error TS7006: Parameter 'i' implicitly has an 'any' type.
+
+74       total: items.reduce((n, i) => n + i.quantity * i.price, 0),
+                                 ~
+
+components/cart-provider.tsx:75:13 - error TS7006: Parameter 'item' implicitly has an 'any' type.
+
+75       add: (item) => dispatch({ type: "add", item }),
+               ~~~~
+
+components/cart-provider.tsx:76:16 - error TS7006: Parameter 'productId' implicitly has an 'any' type.
+
+76       setQty: (productId, quantity) => dispatch({ type: "setQty", productId, quantity }),
+                  ~~~~~~~~~
+
+components/cart-provider.tsx:76:27 - error TS7006: Parameter 'quantity' implicitly has an 'any' type.
+
+76       setQty: (productId, quantity) => dispatch({ type: "setQty", productId, quantity }),
+                             ~~~~~~~~
+
+components/cart-provider.tsx:77:16 - error TS7006: Parameter 'productId' implicitly has an 'any' type.
+
+77       remove: (productId) => dispatch({ type: "remove", productId }),
+                  ~~~~~~~~~
+
+components/cart-provider.tsx:83:10 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+83   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:3:18 - error TS2307: Cannot find module 'next/link' or its corresponding type declarations.
+
+3 import Link from "next/link";
+                   ~~~~~~~~~~~
+
+components/cart-view.tsx:4:27 - error TS2307: Cannot find module 'next/navigation' or its corresponding type declarations.
+
+4 import { useRouter } from "next/navigation";
+                            ~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:5:41 - error TS2307: Cannot find module 'react' or its corresponding type declarations.
+
+5 import { useState, useTransition } from "react";
+                                          ~~~~~~~
+
+components/cart-view.tsx:16:22 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+16   if (!ready) return <div className="h-40 animate-pulse rounded-lg bg-line" aria-busy="true" />;
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:16:22 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+16   if (!ready) return <div className="h-40 animate-pulse rounded-lg bg-line" aria-busy="true" />;
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:20:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+20       <div className="card p-10 text-center">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:21:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+21         <p className="font-semibold">Tu carrito está vacío.</p>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:21:60 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+21         <p className="font-semibold">Tu carrito está vacío.</p>
+                                                              ~~~~
+
+components/cart-view.tsx:23:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+23       </div>
+         ~~~~~~
+
+components/cart-view.tsx:30:48 - error TS7006: Parameter 'i' implicitly has an 'any' type.
+
+30       const res = await createOrder(items.map((i) => ({ productId: i.productId, quantity: i.quantity })));
+                                                  ~
+
+components/cart-view.tsx:38:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+38     <div className="grid gap-6 lg:grid-cols-[1fr_20rem]">
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:39:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+39       <ul className="card divide-y divide-line">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:40:21 - error TS7006: Parameter 'i' implicitly has an 'any' type.
+
+40         {items.map((i) => (
+                       ~
+
+components/cart-view.tsx:41:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+41           <li key={i.productId} className="flex flex-wrap items-center gap-4 p-4">
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:42:13 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+42             <div className="min-w-0 flex-1">
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:44:15 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+44               <p className="text-sm text-ink/60">{formatMoney(i.price)} c/u</p>
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:44:76 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+44               <p className="text-sm text-ink/60">{formatMoney(i.price)} c/u</p>
+                                                                              ~~~~
+
+components/cart-view.tsx:45:13 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+45             </div>
+               ~~~~~~
+
+components/cart-view.tsx:46:13 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+46             <div className="flex items-center gap-2">
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:47:15 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+47               <button className="btn btn-ghost px-3!" onClick={() => setQty(i.productId, i.quantity - 1)} aria-label={`Quitar una unidad de ${i.name}`}>−</button>
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:47:154 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+47               <button className="btn btn-ghost px-3!" onClick={() => setQty(i.productId, i.quantity - 1)} aria-label={`Quitar una unidad de ${i.name}`}>−</button>
+                                                                                                                                                            ~~~~~~~~~
+
+components/cart-view.tsx:48:15 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+48               <span className="w-8 text-center" aria-live="polite">{i.quantity}</span>
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:48:80 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+48               <span className="w-8 text-center" aria-live="polite">{i.quantity}</span>
+                                                                                  ~~~~~~~
+
+components/cart-view.tsx:49:15 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+49               <button className="btn btn-ghost px-3!" onClick={() => setQty(i.productId, i.quantity + 1)} disabled={i.quantity >= i.stock} aria-label={`Agregar una unidad de ${i.name}`}>+</button>
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:49:188 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+49               <button className="btn btn-ghost px-3!" onClick={() => setQty(i.productId, i.quantity + 1)} disabled={i.quantity >= i.stock} aria-label={`Agregar una unidad de ${i.name}`}>+</button>
+                                                                                                                                                                                              ~~~~~~~~~
+
+components/cart-view.tsx:50:13 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+50             </div>
+               ~~~~~~
+
+components/cart-view.tsx:51:13 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+51             <p className="w-24 text-right font-semibold">{formatMoney(i.price * i.quantity)}</p>
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:51:93 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+51             <p className="w-24 text-right font-semibold">{formatMoney(i.price * i.quantity)}</p>
+                                                                                               ~~~~
+
+components/cart-view.tsx:52:13 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+52             <button className="text-sm text-red-700 underline" onClick={() => remove(i.productId)}>Quitar</button>
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:52:106 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+52             <button className="text-sm text-red-700 underline" onClick={() => remove(i.productId)}>Quitar</button>
+                                                                                                            ~~~~~~~~~
+
+components/cart-view.tsx:53:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+53           </li>
+             ~~~~~
+
+components/cart-view.tsx:55:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+55       </ul>
+         ~~~~~
+
+components/cart-view.tsx:56:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+56       <aside className="card h-fit p-5">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:57:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+57         <h2 className="font-bold">Resumen</h2>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:57:42 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+57         <h2 className="font-bold">Resumen</h2>
+                                            ~~~~~
+
+components/cart-view.tsx:58:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+58         <p className="mt-3 flex justify-between text-lg"><span>Total</span><strong>{formatMoney(total)}</strong></p>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:58:58 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+58         <p className="mt-3 flex justify-between text-lg"><span>Total</span><strong>{formatMoney(total)}</strong></p>
+                                                            ~~~~~~
+
+components/cart-view.tsx:58:69 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+58         <p className="mt-3 flex justify-between text-lg"><span>Total</span><strong>{formatMoney(total)}</strong></p>
+                                                                       ~~~~~~~
+
+components/cart-view.tsx:58:76 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+58         <p className="mt-3 flex justify-between text-lg"><span>Total</span><strong>{formatMoney(total)}</strong></p>
+                                                                              ~~~~~~~~
+
+components/cart-view.tsx:58:104 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+58         <p className="mt-3 flex justify-between text-lg"><span>Total</span><strong>{formatMoney(total)}</strong></p>
+                                                                                                          ~~~~~~~~~
+
+components/cart-view.tsx:58:113 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+58         <p className="mt-3 flex justify-between text-lg"><span>Total</span><strong>{formatMoney(total)}</strong></p>
+                                                                                                                   ~~~~
+
+components/cart-view.tsx:59:19 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+59         {error && <p className="mt-3 rounded bg-red-50 p-3 text-sm text-red-800" role="alert">{error}</p>}
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:59:102 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+59         {error && <p className="mt-3 rounded bg-red-50 p-3 text-sm text-red-800" role="alert">{error}</p>}
+                                                                                                        ~~~~
+
+components/cart-view.tsx:60:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+60         <button className="btn btn-primary mt-4 w-full" onClick={checkout} disabled={pending}>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:62:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+62         </button>
+           ~~~~~~~~~
+
+components/cart-view.tsx:63:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+63         <p className="mt-2 text-xs text-ink/60">Al crear la orden se reserva el stock. El pago se realiza en el siguiente paso.</p>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/cart-view.tsx:63:128 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+63         <p className="mt-2 text-xs text-ink/60">Al crear la orden se reserva el stock. El pago se realiza en el siguiente paso.</p>
+                                                                                                                                  ~~~~
+
+components/cart-view.tsx:64:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+64       </aside>
+         ~~~~~~~~
+
+components/cart-view.tsx:65:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+65     </div>
+       ~~~~~~
+
+components/order-list.tsx:1:18 - error TS2307: Cannot find module 'next/link' or its corresponding type declarations.
+
+1 import Link from "next/link";
+                   ~~~~~~~~~~~
+
+components/order-list.tsx:16:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+16       <div className="card p-10 text-center">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/order-list.tsx:16:7 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+16       <div className="card p-10 text-center">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+17         <p className="font-semibold">Aún no tienes compras.</p>
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+18         <Link href="/products" className="btn btn-primary mt-4">Ir al catálogo</Link>
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+19       </div>
+   ~~~~~~~~~~~~
+
+components/order-list.tsx:17:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+17         <p className="font-semibold">Aún no tienes compras.</p>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/order-list.tsx:17:60 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+17         <p className="font-semibold">Aún no tienes compras.</p>
+                                                              ~~~~
+
+components/order-list.tsx:19:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+19       </div>
+         ~~~~~~
+
+components/order-list.tsx:24:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+24     <ul className="card divide-y divide-line">
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/order-list.tsx:26:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+26         <li key={o.id}>
+           ~~~~~~~~~~~~~~~
+
+components/order-list.tsx:28:13 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+28             <div className="flex-1">
+               ~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/order-list.tsx:29:15 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+29               <p className="font-semibold">Orden #{o.id}</p>
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/order-list.tsx:29:57 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+29               <p className="font-semibold">Orden #{o.id}</p>
+                                                           ~~~~
+
+components/order-list.tsx:30:15 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+30               <p className="text-sm text-ink/60">{formatDate(o.createdAt)} · {o.items.length} {o.items.length === 1 ? "producto" : "productos"}</p>
+                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/order-list.tsx:30:144 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+30               <p className="text-sm text-ink/60">{formatDate(o.createdAt)} · {o.items.length} {o.items.length === 1 ? "producto" : "productos"}</p>
+                                                                                                                                                  ~~~~
+
+components/order-list.tsx:31:13 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+31             </div>
+               ~~~~~~
+
+components/order-list.tsx:32:13 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+32             <span className={`rounded-full px-3 py-1 text-xs font-semibold ${BADGE[o.status] ?? "bg-line"}`}>{STATUS_LABEL[o.status] ?? o.status}</span>
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/order-list.tsx:32:146 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+32             <span className={`rounded-full px-3 py-1 text-xs font-semibold ${BADGE[o.status] ?? "bg-line"}`}>{STATUS_LABEL[o.status] ?? o.status}</span>
+                                                                                                                                                    ~~~~~~~
+
+components/order-list.tsx:33:13 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+33             <span className="w-24 text-right font-bold">{formatMoney(o.total)}</span>
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/order-list.tsx:33:79 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+33             <span className="w-24 text-right font-bold">{formatMoney(o.total)}</span>
+                                                                                 ~~~~~~~
+
+components/order-list.tsx:35:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+35         </li>
+           ~~~~~
+
+components/order-list.tsx:37:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+37     </ul>
+       ~~~~~
+
+components/order-list.tsx:43:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+43     <div className="card divide-y divide-line" aria-busy="true" aria-label="Cargando compras">
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/order-list.tsx:45:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+45         <div key={i} className="flex gap-4 p-4">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/order-list.tsx:46:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+46           <div className="h-10 flex-1 animate-pulse rounded bg-line" />
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/order-list.tsx:47:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+47           <div className="h-10 w-24 animate-pulse rounded bg-line" />
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/order-list.tsx:48:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+48         </div>
+           ~~~~~~
+
+components/order-list.tsx:50:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+50     </div>
+       ~~~~~~
+
+components/order-summary.tsx:6:5 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+6     <>
+      ~~
+
+components/order-summary.tsx:7:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+7       <ul className="divide-y divide-line">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/order-summary.tsx:9:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+9           <li key={`${i.productId}-${idx}`} className="flex justify-between gap-4 py-2 text-sm">
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/order-summary.tsx:10:13 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+10             <span>{i.quantity} × {i.name}</span>
+               ~~~~~~
+
+components/order-summary.tsx:10:42 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+10             <span>{i.quantity} × {i.name}</span>
+                                            ~~~~~~~
+
+components/order-summary.tsx:11:13 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+11             <span>{formatMoney(i.quantity * i.unitPrice)}</span>
+               ~~~~~~
+
+components/order-summary.tsx:11:58 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+11             <span>{formatMoney(i.quantity * i.unitPrice)}</span>
+                                                            ~~~~~~~
+
+components/order-summary.tsx:12:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+12           </li>
+             ~~~~~
+
+components/order-summary.tsx:14:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+14       </ul>
+         ~~~~~
+
+components/order-summary.tsx:15:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+15       <p className="mt-3 flex justify-between border-t border-line pt-3 font-bold"><span>Total</span><span>{formatMoney(order.total)}</span></p>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/order-summary.tsx:15:84 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+15       <p className="mt-3 flex justify-between border-t border-line pt-3 font-bold"><span>Total</span><span>{formatMoney(order.total)}</span></p>
+                                                                                      ~~~~~~
+
+components/order-summary.tsx:15:95 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+15       <p className="mt-3 flex justify-between border-t border-line pt-3 font-bold"><span>Total</span><span>{formatMoney(order.total)}</span></p>
+                                                                                                 ~~~~~~~
+
+components/order-summary.tsx:15:102 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+15       <p className="mt-3 flex justify-between border-t border-line pt-3 font-bold"><span>Total</span><span>{formatMoney(order.total)}</span></p>
+                                                                                                        ~~~~~~
+
+components/order-summary.tsx:15:134 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+15       <p className="mt-3 flex justify-between border-t border-line pt-3 font-bold"><span>Total</span><span>{formatMoney(order.total)}</span></p>
+                                                                                                                                        ~~~~~~~
+
+components/order-summary.tsx:15:141 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+15       <p className="mt-3 flex justify-between border-t border-line pt-3 font-bold"><span>Total</span><span>{formatMoney(order.total)}</span></p>
+                                                                                                                                               ~~~~
+
+components/payment-form.tsx:3:41 - error TS2307: Cannot find module 'react' or its corresponding type declarations.
+
+3 import { useState, useTransition } from "react";
+                                          ~~~~~~~
+
+components/payment-form.tsx:4:28 - error TS2307: Cannot find module '@stripe/stripe-js' or its corresponding type declarations.
+
+4 import { loadStripe } from "@stripe/stripe-js";
+                             ~~~~~~~~~~~~~~~~~~~
+
+components/payment-form.tsx:5:63 - error TS2307: Cannot find module '@stripe/react-stripe-js' or its corresponding type declarations.
+
+5 import { CardElement, Elements, useElements, useStripe } from "@stripe/react-stripe-js";
+                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/payment-form.tsx:9:13 - error TS2591: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.
+
+9 const key = process.env.NEXT_PUBLIC_STRIPE_KEY;
+              ~~~~~~~
+
+components/payment-form.tsx:18:30 - error TS2503: Cannot find namespace 'React'.
+
+18   const onSubmit = async (e: React.FormEvent) => {
+                                ~~~~~
+
+components/payment-form.tsx:35:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+35     <form onSubmit={onSubmit} className="space-y-4">
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/payment-form.tsx:35:5 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+ 35     <form onSubmit={onSubmit} className="space-y-4">
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 36       <div className="field py-3!"><CardElement options={{ hidePostalCode: true }} /></div>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+ 41       <p className="text-xs text-ink/60">Modo prueba: usa la tarjeta 4242 4242 4242 4242, cualquier fecha futura y CVC.</p>
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 42     </form>
+    ~~~~~~~~~~~
+
+components/payment-form.tsx:36:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+36       <div className="field py-3!"><CardElement options={{ hidePostalCode: true }} /></div>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/payment-form.tsx:36:86 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+36       <div className="field py-3!"><CardElement options={{ hidePostalCode: true }} /></div>
+                                                                                        ~~~~~~
+
+components/payment-form.tsx:37:17 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+37       {error && <p className="rounded bg-red-50 p-3 text-sm text-red-800" role="alert">{error}</p>}
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/payment-form.tsx:37:95 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+37       {error && <p className="rounded bg-red-50 p-3 text-sm text-red-800" role="alert">{error}</p>}
+                                                                                                 ~~~~
+
+components/payment-form.tsx:38:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+38       <button className="btn btn-primary w-full" disabled={!stripe || pending}>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/payment-form.tsx:40:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+40       </button>
+         ~~~~~~~~~
+
+components/payment-form.tsx:41:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+41       <p className="text-xs text-ink/60">Modo prueba: usa la tarjeta 4242 4242 4242 4242, cualquier fecha futura y CVC.</p>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/payment-form.tsx:41:120 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+41       <p className="text-xs text-ink/60">Modo prueba: usa la tarjeta 4242 4242 4242 4242, cualquier fecha futura y CVC.</p>
+                                                                                                                          ~~~~
+
+components/payment-form.tsx:42:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+42     </form>
+       ~~~~~~~
+
+components/payment-form.tsx:48:12 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+48     return <p className="rounded bg-amber-50 p-3 text-sm text-amber-900">Falta configurar NEXT_PUBLIC_STRIPE_KEY en .env.local.</p>;
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/payment-form.tsx:48:128 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+48     return <p className="rounded bg-amber-50 p-3 text-sm text-amber-900">Falta configurar NEXT_PUBLIC_STRIPE_KEY en .env.local.</p>;
+                                                                                                                                  ~~~~
+
+components/product-card.tsx:1:18 - error TS2307: Cannot find module 'next/link' or its corresponding type declarations.
+
+1 import Link from "next/link";
+                   ~~~~~~~~~~~
+
+components/product-card.tsx:10:5 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+10     <img src={product.imageUrl} alt={product.name} loading="lazy" className={`object-cover ${className}`} />
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/product-card.tsx:10:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+10     <img src={product.imageUrl} alt={product.name} loading="lazy" className={`object-cover ${className}`} />
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/product-card.tsx:12:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+ 12     <div
+        ~~~~
+ 13       className={`flex items-center justify-center text-5xl font-bold text-ink/40 ${className}`}
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+... 
+ 15       aria-hidden
+    ~~~~~~~~~~~~~~~~~
+ 16     >
+    ~~~~~
+
+components/product-card.tsx:18:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+18     </div>
+       ~~~~~~
+
+components/product-card.tsx:25:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+25     <li>
+       ~~~~
+
+components/product-card.tsx:28:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+28         <div className="p-4">
+           ~~~~~~~~~~~~~~~~~~~~~
+
+components/product-card.tsx:29:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+29           <h3 className="font-semibold">{product.name}</h3>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/product-card.tsx:29:55 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+29           <h3 className="font-semibold">{product.name}</h3>
+                                                         ~~~~~
+
+components/product-card.tsx:30:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+30           <p className="mt-1 line-clamp-2 text-sm text-ink/60">{product.description}</p>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/product-card.tsx:30:85 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+30           <p className="mt-1 line-clamp-2 text-sm text-ink/60">{product.description}</p>
+                                                                                       ~~~~
+
+components/product-card.tsx:31:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+31           <div className="mt-3 flex items-baseline justify-between">
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/product-card.tsx:32:13 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+32             <span className="text-lg font-bold">{formatMoney(product.price)}</span>
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/product-card.tsx:32:77 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+32             <span className="text-lg font-bold">{formatMoney(product.price)}</span>
+                                                                               ~~~~~~~
+
+components/product-card.tsx:33:13 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+33             <span className={`text-sm ${soldOut ? "text-red-700" : "text-ink/60"}`}>
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/product-card.tsx:35:13 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+35             </span>
+               ~~~~~~~
+
+components/product-card.tsx:36:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+36           </div>
+             ~~~~~~
+
+components/product-card.tsx:37:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+37         </div>
+           ~~~~~~
+
+components/product-card.tsx:39:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+39     </li>
+       ~~~~~
+
+components/product-grid.tsx:1:18 - error TS2307: Cannot find module 'next/link' or its corresponding type declarations.
+
+1 import Link from "next/link";
+                   ~~~~~~~~~~~
+
+components/product-grid.tsx:11:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+11       <div className="card p-10 text-center">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/product-grid.tsx:11:7 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+11       <div className="card p-10 text-center">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+12         <p className="font-semibold">No encontramos productos{search ? ` para “${search}”` : ""}.</p>
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+13         {search && <Link href="/products" className="mt-3 inline-block text-brand underline">Ver todo el catálogo</Link>}
+   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+14       </div>
+   ~~~~~~~~~~~~
+
+components/product-grid.tsx:12:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+12         <p className="font-semibold">No encontramos productos{search ? ` para “${search}”` : ""}.</p>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/product-grid.tsx:12:98 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+12         <p className="font-semibold">No encontramos productos{search ? ` para “${search}”` : ""}.</p>
+                                                                                                    ~~~~
+
+components/product-grid.tsx:14:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+14       </div>
+         ~~~~~~
+
+components/product-grid.tsx:28:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+28       <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/product-grid.tsx:29:40 - error TS2322: Type '{ key: number; product: Product; }' is not assignable to type '{ product: Product; }'.
+  Property 'key' does not exist on type '{ product: Product; }'.
+
+29         {items.map((p) => <ProductCard key={p.id} product={p} />)}
+                                          ~~~
+
+components/product-grid.tsx:30:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+30       </ul>
+         ~~~~~
+
+components/product-grid.tsx:32:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+32         <nav className="mt-8 flex items-center justify-center gap-4" aria-label="Paginación">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/product-grid.tsx:34:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+34           <span className="text-sm text-ink/60">Página {currentPage} de {lastPage}</span>
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/product-grid.tsx:34:83 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+34           <span className="text-sm text-ink/60">Página {currentPage} de {lastPage}</span>
+                                                                                     ~~~~~~~
+
+components/product-grid.tsx:36:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+36         </nav>
+           ~~~~~~
+
+components/product-grid.tsx:44:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+44     <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4" aria-busy="true" aria-label="Cargando productos">
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/product-grid.tsx:46:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+46         <li key={i} className="card overflow-hidden">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/product-grid.tsx:47:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+47           <div className="aspect-[4/3] animate-pulse bg-line" />
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/product-grid.tsx:48:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+48           <div className="space-y-2 p-4">
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/product-grid.tsx:49:13 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+49             <div className="h-4 w-2/3 animate-pulse rounded bg-line" />
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/product-grid.tsx:50:13 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+50             <div className="h-3 w-full animate-pulse rounded bg-line" />
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/product-grid.tsx:51:13 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+51             <div className="h-5 w-1/3 animate-pulse rounded bg-line" />
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/product-grid.tsx:52:11 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+52           </div>
+             ~~~~~~
+
+components/product-grid.tsx:53:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+53         </li>
+           ~~~~~
+
+components/product-grid.tsx:55:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+55     </ul>
+       ~~~~~
+
+components/site-header.tsx:1:18 - error TS2307: Cannot find module 'next/link' or its corresponding type declarations.
+
+1 import Link from "next/link";
+                   ~~~~~~~~~~~
+
+components/site-header.tsx:2:26 - error TS2307: Cannot find module 'react' or its corresponding type declarations.
+
+2 import { Suspense } from "react";
+                           ~~~~~~~
+
+components/site-header.tsx:3:25 - error TS2307: Cannot find module 'next/headers' or its corresponding type declarations.
+
+3 import { cookies } from "next/headers";
+                          ~~~~~~~~~~~~~~
+
+components/site-header.tsx:13:7 - error TS2875: This JSX tag requires the module path 'react/jsx-runtime' to exist, but none could be found. Make sure you have types for the appropriate package installed.
+
+13       <>
+         ~~
+
+components/site-header.tsx:23:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+23       <span className="hidden text-sm text-ink/60 sm:inline">{me?.name ?? me?.email}</span>
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/site-header.tsx:23:85 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+23       <span className="hidden text-sm text-ink/60 sm:inline">{me?.name ?? me?.email}</span>
+                                                                                       ~~~~~~~
+
+components/site-header.tsx:24:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+24       <form action={logout}>
+         ~~~~~~~~~~~~~~~~~~~~~~
+
+components/site-header.tsx:25:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+25         <button className="nav-link">Salir</button>
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/site-header.tsx:25:43 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+25         <button className="nav-link">Salir</button>
+                                             ~~~~~~~~~
+
+components/site-header.tsx:26:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+26       </form>
+         ~~~~~~~
+
+components/site-header.tsx:33:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+33     <header className="border-b border-line bg-white">
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/site-header.tsx:34:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+34       <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3">
+         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/site-header.tsx:36:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+36         <nav className="ml-auto flex items-center gap-4" aria-label="Principal">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/site-header.tsx:39:31 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+39           <Suspense fallback={<span className="h-5 w-24 animate-pulse rounded bg-line" />}>
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+components/site-header.tsx:42:9 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+42         </nav>
+           ~~~~~~
+
+components/site-header.tsx:43:7 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+43       </div>
+         ~~~~~~
+
+components/site-header.tsx:44:5 - error TS7026: JSX element implicitly has type 'any' because no interface 'JSX.IntrinsicElements' exists.
+
+44     </header>
+       ~~~~~~~~~
+
+lib/api.ts:1:8 - error TS2882: Cannot find module or type declarations for side-effect import of 'server-only'.
+
+1 import "server-only";
+         ~~~~~~~~~~~~~
+
+lib/api.ts:2:25 - error TS2307: Cannot find module 'next/headers' or its corresponding type declarations.
+
+2 import { cookies } from "next/headers";
+                          ~~~~~~~~~~~~~~
+
+lib/config.ts:1:24 - error TS2591: Cannot find name 'process'. Do you need to install type definitions for node? Try `npm i --save-dev @types/node` and then add 'node' to the types field in your tsconfig.
+
+1 export const API_URL = process.env.API_URL ?? "http://localhost:8000/api";
+                         ~~~~~~~
+
+lib/data.ts:1:8 - error TS2882: Cannot find module or type declarations for side-effect import of 'server-only'.
+
+1 import "server-only";
+         ~~~~~~~~~~~~~
+
+lib/data.ts:2:26 - error TS2307: Cannot find module 'next/navigation' or its corresponding type declarations.
+
+2 import { redirect } from "next/navigation";
+                           ~~~~~~~~~~~~~~~~~
+
+next.config.ts:1:33 - error TS2307: Cannot find module 'next' or its corresponding type declarations.
+
+1 import type { NextConfig } from "next";
+                                  ~~~~~~
+
+proxy.ts:1:48 - error TS2307: Cannot find module 'next/server' or its corresponding type declarations.
+
+1 import { NextResponse, type NextRequest } from "next/server";
+                                                 ~~~~~~~~~~~~~
+
+
+Found 400 errors in 36 files.
+
+Errors  Files
+     4  app/actions/auth.ts:3
+     3  app/actions/orders.ts:3
+     4  app/cart/page.tsx:1
+     9  app/checkout/[orderId]/error.tsx:5
+     5  app/checkout/[orderId]/loading.tsx:3
+    18  app/checkout/[orderId]/page.tsx:1
+    11  app/error.tsx:5
+    11  app/layout.tsx:1
+     2  app/login/page.tsx:1
+     8  app/not-found.tsx:1
+    29  app/orders/[id]/page.tsx:1
+     9  app/orders/error.tsx:5
+     2  app/orders/loading.tsx:5
+     5  app/orders/page.tsx:1
+     1  app/page.tsx:1
+     9  app/products/[id]/loading.tsx:3
+    27  app/products/[id]/page.tsx:1
+     2  app/products/loading.tsx:5
+    14  app/products/page.tsx:1
+     2  app/register/page.tsx:1
+    11  components/add-to-cart-button.tsx:3
+    25  components/auth-form.tsx:3
+     4  components/cart-link.tsx:3
+    11  components/cart-provider.tsx:3
+    49  components/cart-view.tsx:3
+    26  components/order-list.tsx:1
+    15  components/order-summary.tsx:6
+    18  components/payment-form.tsx:3
+    19  components/product-card.tsx:1
+    23  components/product-grid.tsx:1
+    17  components/site-header.tsx:1
+     2  lib/api.ts:1
+     1  lib/config.ts:1
+     2  lib/data.ts:1
+     1  next.config.ts:1
+     1  proxy.ts:1
+
+npm notice
+npm notice New minor version of npm available! 11.6.2 -> 11.21.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.21.0
+npm notice To update run: npm install -g npm@11.21.0
+npm notice
+
